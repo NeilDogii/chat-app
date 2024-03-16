@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+  {% load static %}
+   <meta charset="UTF-8">
+      <link rel="stylesheet" href="{%static 'styles/style.css' %}">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login</title>
+</head>
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+
+    <div class="fadeIn first">
+      Please enter your Username and password
+    </div>
+
+    <form method ="post">
+      {% csrf_token %}
+      <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username">
+      <input type="text" id="first" class="fadeIn second" name="first_name" placeholder="First name">
+      <input type="text" id="last" class="fadeIn second" name="last_name" placeholder="Last name">
+      <input type="text" id="emailID" class="fadeIn second" name="emailID" placeholder="EmailID">
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+      <input type="submit" class="fadeIn fourth" value="Sign Up" name="Login_data">
+    </form>
+
+    <div id="formFooter">
+      <a class="underlineHover" href="/auth/login">Login</a>
+    </div>
+</div>
+</div>
+</html>
